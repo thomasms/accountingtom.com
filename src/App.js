@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import Grid from "@material-ui/core/Grid";
+
+import AppNavBar from "./AppNavBar";
+import AppCard from "./AppCard";
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="app">
+      <AppNavBar position="sticky" />
+      <div className="app-main">
+        <Grid
+          container
+          spacing={2}
+          direction="row"
+          justify="space-evenly"
+          alignItems="center"
+          style={{}}
         >
-          Learn React
-        </a>
-      </header>
+          <Grid item xs={12} md={6} lg={4}>
+            <AppCard elevation={3} width={64} height={64} />{" "}
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <AppCard elevation={3} width={64} height={64} />{" "}
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <AppCard elevation={3} width={64} height={64} />{" "}
+          </Grid>
+        </Grid>
+      </div>
     </div>
   );
 }
